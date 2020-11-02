@@ -10,7 +10,7 @@ Kubernetes 在 1.9 版本引入了 [动态准入机制](https://kubernetes.io/zh
 
 ## 先置条件
 
-TiDB Operator 准入控制器与大部分 Kubernetes 平台上产品的准入控制器较为不同，TiDB Operator 通过[扩展 API-Server](https://kubernetes.io/docs/tasks/access-kubernetes-api/setup-extension-api-server/) 与 [WebhookConfiguration](https://kubernetes.io/docs/reference/access-authn-authz/extensible-admission-controllers/#configure-admission-webhooks-on-the-fly) 的两个机制组合而成。所以需要 Kubernetes 集群启用聚合层功能，通常情况下这个功能已经默认开启。如需查看是否开启聚合层功能，请参考[启用 Kubernetes Apiserver 标志](https://kubernetes.io/zh/docs/tasks/access-kubernetes-api/configure-aggregation-layer/#%E5%90%AF%E7%94%A8-kubernetes-apiserver-%E6%A0%87%E5%BF%97)。
+TiDB Operator 准入控制器与大部分 Kubernetes 平台上产品的准入控制器较为不同，TiDB Operator 通过[扩展 API-Server](https://kubernetes.io/docs/tasks/access-kubernetes-api/setup-extension-api-server/) 与 [WebhookConfiguration](https://kubernetes.io/docs/reference/access-authn-authz/extensible-admission-controllers/#configure-admission-webhooks-on-the-fly) 的两个机制组合而成。所以需要 Kubernetes 集群启用聚合层功能，通常情况下这个功能已经默认开启。如需查看是否开启聚合层功能，请参考[启用 Kubernetes Apiserver 标志](https://kubernetes.io/zh/docs/tasks/extend-kubernetes/configure-aggregation-layer/#%E5%90%AF%E7%94%A8-kubernetes-apiserver-%E6%A0%87%E5%BF%97)。
 
 ## 开启 TiDB Operator 准入控制器
 
@@ -212,12 +212,12 @@ TiDB Operator 通过准入控制器的帮助实现了许多功能。我们将在
         statefulSets: false
     ```
 
-    通过 `tidb.pingcap.com/tikv-partition` 和 `tidb.pingcap.com/tidb-partition` 这两个 annotation, 你可以控制 TiDB 集群中 TiDB 与 TiKV 组件的灰度发布。你可以通过以下方式对 TiDB 集群的 TiKV 组件设置灰度发布，其中 `partition=2` 的效果等同于 [StatefulSet 分区](https://kubernetes.io/zh/docs/concepts/workloads/controllers/statefulset/#%E5%88%86%E5%8C%BA)
+    通过 `tidb.pingcap.com/tikv-partition` 和 `tidb.pingcap.com/tidb-partition` 这两个 annotation, 你可以控制 TiDB 集群中 TiDB 与 TiKV 组件的灰度发布。你可以通过以下方式对 TiDB 集群的 TiKV 组件设置灰度发布，其中 `partition=2` 的效果等同于 [StatefulSet 分区](https://kubernetes.io/zh/docs/concepts/workloads/controllers/statefulset/#partitions)
 
     {{< copyable "shell-regular" >}}
 
     ```shell
-    $  kubectl annotate tidbcluster ${name} -n ${namespace} tidb.pingcap.com/tikv-partition=2 
+    kubectl annotate tidbcluster ${name} -n ${namespace} tidb.pingcap.com/tikv-partition=2
     tidbcluster.pingcap.com/${name} annotated
     ```
 
@@ -226,7 +226,7 @@ TiDB Operator 通过准入控制器的帮助实现了许多功能。我们将在
     {{< copyable "shell-regular" >}}
 
     ```shell
-    $  kubectl annotate tidbcluster ${name} -n ${namespace} tidb.pingcap.com/tikv-partition- 
+    kubectl annotate tidbcluster ${name} -n ${namespace} tidb.pingcap.com/tikv-partition-
     tidbcluster.pingcap.com/${name} annotated
     ```
 
