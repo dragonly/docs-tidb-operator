@@ -84,12 +84,12 @@ Refer to [Ad-hoc backup prerequisites](backup-to-aws-s3-using-br.md#prerequisite
         # storageClass: STANDARD_IA
         # acl: private
         # endpoint:
-    # dumpling:
-    #  options:
-    #  - --threads=16
-    #  - --rows=10000
-    #  tableFilter:
-    #  - "test.*"
+      # dumpling:
+      #   options:
+      #   - --threads=16
+      #   - --rows=10000
+      # tableFilter:
+      # - "test.*"
       # storageClassName: local-storage
       storageSize: 10Gi
     ```
@@ -123,12 +123,12 @@ Refer to [Ad-hoc backup prerequisites](backup-to-aws-s3-using-br.md#prerequisite
         endpoint: ${endpoint}
         # prefix: ${prefix}
         bucket: ${bucket}
-    # dumpling:
-    #  options:
-    #  - --threads=16
-    #  - --rows=10000
-    #  tableFilter:
-    #  - "test.*"
+      # dumpling:
+      #   options:
+      #   - --threads=16
+      #   - --rows=10000
+      # tableFilter:
+      # - "test.*"
       # storageClassName: local-storage
       storageSize: 10Gi
     ```
@@ -167,12 +167,12 @@ Refer to [Ad-hoc backup prerequisites](backup-to-aws-s3-using-br.md#prerequisite
         # storageClass: STANDARD_IA
         # acl: private
         # endpoint:
-    # dumpling:
-    #  options:
-    #  - --threads=16
-    #  - --rows=10000
-    #  tableFilter:
-    #  - "test.*"
+      # dumpling:
+      #   options:
+      #   - --threads=16
+      #   - --rows=10000
+      # tableFilter:
+      # - "test.*"
       # storageClassName: local-storage
       storageSize: 10Gi
     ```
@@ -210,12 +210,12 @@ Refer to [Ad-hoc backup prerequisites](backup-to-aws-s3-using-br.md#prerequisite
         # storageClass: STANDARD_IA
         # acl: private
         # endpoint:
-    # dumpling:
-    #  options:
-    #  - --threads=16
-    #  - --rows=10000
-    #  tableFilter:
-    #  - "test.*"
+      # dumpling:
+      #   options:
+      #   - --threads=16
+      #   - --rows=10000
+      # tableFilter:
+      # - "test.*"
       # storageClassName: local-storage
       storageSize: 10Gi
     ```
@@ -402,12 +402,12 @@ The prerequisites for the scheduled backup is the same as the [prerequisites for
           # storageClass: STANDARD_IA
           # acl: private
           # endpoint:
-      # dumpling:
-      #  options:
-      #  - --threads=16
-      #  - --rows=10000
-      #  tableFilter:
-      #  - "test.*"
+        # dumpling:
+        #   options:
+        #   - --threads=16
+        #   - --rows=10000
+        # tableFilter:
+        # - "test.*"
         # storageClassName: local-storage
         storageSize: 10Gi
     ```
@@ -446,12 +446,12 @@ The prerequisites for the scheduled backup is the same as the [prerequisites for
           endpoint: ${endpoint}
           bucket: ${bucket}
           # prefix: ${prefix}
-      # dumpling:
-      #  options:
-      #  - --threads=16
-      #  - --rows=10000
-      #  tableFilter:
-      #  - "test.*"
+        # dumpling:
+        #   options:
+        #   - --threads=16
+        #   - --rows=10000
+        # tableFilter:
+        # - "test.*"
         # storageClassName: local-storage
         storageSize: 10Gi
     ```
@@ -494,12 +494,12 @@ The prerequisites for the scheduled backup is the same as the [prerequisites for
           # storageClass: STANDARD_IA
           # acl: private
           # endpoint:
-      # dumpling:
-      #  options:
-      #  - --threads=16
-      #  - --rows=10000
-      #  tableFilter:
-      #  - "test.*"
+        # dumpling:
+        #   options:
+        #   - --threads=16
+        #   - --rows=10000
+        # tableFilter:
+        # - "test.*"
         # storageClassName: local-storage
         storageSize: 10Gi
     ```
@@ -541,12 +541,12 @@ The prerequisites for the scheduled backup is the same as the [prerequisites for
           # storageClass: STANDARD_IA
           # acl: private
           # endpoint:
-      # dumpling:
-      #  options:
-      #  - --threads=16
-      #  - --rows=10000
-      #  tableFilter:
-      #  - "test.*"
+        # dumpling:
+        #   options:
+        #   - --threads=16
+        #   - --rows=10000
+        # tableFilter:
+        # - "test.*"
         # storageClassName: local-storage
         storageSize: 10Gi
     ```

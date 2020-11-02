@@ -80,12 +80,12 @@ Ad-hoc 全量备份通过创建一个自定义的 `Backup` custom resource (CR) 
         # storageClass: STANDARD_IA
         # acl: private
         # endpoint:
-    # dumpling:
-    #  options:
-    #  - --threads=16
-    #  - --rows=10000
-    #  tableFilter:
-    #  - "test.*"
+      # dumpling:
+      #   options:
+      #   - --threads=16
+      #   - --rows=10000
+      # tableFilter:
+      # - "test.*"
       # storageClassName: local-storage
       storageSize: 10Gi
     ```
@@ -119,12 +119,12 @@ Ad-hoc 全量备份通过创建一个自定义的 `Backup` custom resource (CR) 
         endpoint: ${endpoint}
         # prefix: ${prefix}
         bucket: ${bucket}
-    # dumpling:
-    #  options:
-    #  - --threads=16
-    #  - --rows=10000
-    #  tableFilter:
-    #  - "test.*"
+      # dumpling:
+      #   options:
+      #   - --threads=16
+      #   - --rows=10000
+      # tableFilter:
+      # - "test.*"
       # storageClassName: local-storage
       storageSize: 10Gi
     ```
@@ -163,12 +163,12 @@ Ad-hoc 全量备份通过创建一个自定义的 `Backup` custom resource (CR) 
         # storageClass: STANDARD_IA
         # acl: private
         # endpoint:
-    # dumpling:
-    #  options:
-    #  - --threads=16
-    #  - --rows=10000
-    #  tableFilter:
-    #  - "test.*"
+      # dumpling:
+      #   options:
+      #   - --threads=16
+      #   - --rows=10000
+      # tableFilter:
+      # - "test.*"
       # storageClassName: local-storage
       storageSize: 10Gi
     ```
@@ -206,12 +206,12 @@ Ad-hoc 全量备份通过创建一个自定义的 `Backup` custom resource (CR) 
         # storageClass: STANDARD_IA
         # acl: private
         # endpoint:
-    # dumpling:
-    #  options:
-    #  - --threads=16
-    #  - --rows=10000
-    #  tableFilter:
-    #  - "test.*"
+      # dumpling:
+      #   options:
+      #   - --threads=16
+      #   - --rows=10000
+      # tableFilter:
+      # - "test.*"
       # storageClassName: local-storage
       storageSize: 10Gi
     ```
@@ -381,12 +381,12 @@ kubectl get bk -n test1 -owide
           # storageClass: STANDARD_IA
           # acl: private
           # endpoint:
-      # dumpling:
-      #  options:
-      #  - --threads=16
-      #  - --rows=10000
-      #  tableFilter:
-      #  - "test.*"
+        # dumpling:
+        #   options:
+        #   - --threads=16
+        #   - --rows=10000
+        # tableFilter:
+        # - "test.*"
         # storageClassName: local-storage
         storageSize: 10Gi
     ```
@@ -425,12 +425,12 @@ kubectl get bk -n test1 -owide
           endpoint: ${endpoint}
           bucket: ${bucket}
           # prefix: ${prefix}
-      # dumpling:
-      #  options:
-      #  - --threads=16
-      #  - --rows=10000
-      #  tableFilter:
-      #  - "test.*"
+        # dumpling:
+        #   options:
+        #   - --threads=16
+        #   - --rows=10000
+        # tableFilter:
+        # - "test.*"
         # storageClassName: local-storage
         storageSize: 10Gi
     ```
@@ -473,12 +473,12 @@ kubectl get bk -n test1 -owide
           # storageClass: STANDARD_IA
           # acl: private
           # endpoint:
-      # dumpling:
-      #  options:
-      #  - --threads=16
-      #  - --rows=10000
-      #  tableFilter:
-      #  - "test.*"
+        # dumpling:
+        #   options:
+        #   - --threads=16
+        #   - --rows=10000
+        # tableFilter:
+        # - "test.*"
         # storageClassName: local-storage
         storageSize: 10Gi
     ```
@@ -520,12 +520,12 @@ kubectl get bk -n test1 -owide
           # storageClass: STANDARD_IA
           # acl: private
           # endpoint:
-      # dumpling:
-      #  options:
-      #  - --threads=16
-      #  - --rows=10000
-      #  tableFilter:
-      #  - "test.*"
+        # dumpling:
+        #   options:
+        #   - --threads=16
+        #   - --rows=10000
+        # tableFilter:
+        # - "test.*"
         # storageClassName: local-storage
         storageSize: 10Gi
     ```

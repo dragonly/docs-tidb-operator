@@ -79,11 +79,11 @@ To better explain how to perform the backup operation, this document shows an ex
         # objectAcl: private
         # bucketAcl: private
     # dumpling:
-    #  options:
-    #  - --threads=16
-    #  - --rows=10000
-    #  tableFilter:
-    #  - "test.*"
+    #   options:
+    #   - --threads=16
+    #   - --rows=10000
+    # tableFilter:
+    # - "test.*"
     storageClassName: local-storage
     storageSize: 10Gi
     ```
@@ -254,12 +254,12 @@ The prerequisites for the scheduled backup is the same as the [prerequisites for
           # storageClass: STANDARD_IA
           # objectAcl: private
           # bucketAcl: private
-      # dumpling:
-      #  options:
-      #  - --threads=16
-      #  - --rows=10000
-      #  tableFilter:
-      #  - "test.*"
+        # dumpling:
+        #   options:
+        #   - --threads=16
+        #   - --rows=10000
+        # tableFilter:
+        # - "test.*"
         # storageClassName: local-storage
         storageSize: 10Gi
     ```
