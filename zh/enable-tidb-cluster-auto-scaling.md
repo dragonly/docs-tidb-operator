@@ -109,19 +109,19 @@ spec:
     {{< copyable "shell-regular" >}}
 
     ```shell
-    $ kubectl apply -f https://raw.githubusercontent.com/pingcap/tidb-operator/master/examples/auto-scale/tidb-cluster.yaml -n ${namespace}
+    kubectl apply -f https://raw.githubusercontent.com/pingcap/tidb-operator/master/examples/auto-scale/tidb-cluster.yaml -n ${namespace}
     ```
 
     {{< copyable "shell-regular" >}}
 
     ```shell
-    $ kubectl apply -f https://raw.githubusercontent.com/pingcap/tidb-operator/master/examples/auto-scale/tidb-monitor.yaml -n ${namespace}
+    kubectl apply -f https://raw.githubusercontent.com/pingcap/tidb-operator/master/examples/auto-scale/tidb-monitor.yaml -n ${namespace}
     ```
 
     {{< copyable "shell-regular" >}}
 
     ```shell
-    $ kubectl apply -f https://raw.githubusercontent.com/pingcap/tidb-operator/master/examples/auto-scale/tidb-cluster-auto-scaler.yaml  -n ${namespace}
+    kubectl apply -f https://raw.githubusercontent.com/pingcap/tidb-operator/master/examples/auto-scale/tidb-cluster-auto-scaler.yaml  -n ${namespace}
     ```
 
 2. 当 TiDB 集群创建完毕以后，使用以下方式暴露 TiDB 集群服务到本地。
@@ -130,20 +130,6 @@ spec:
 
     ```shell
     kubectl port-forward svc/auto-scaling-demo-tidb 4000:4000 &
-    ```
-
-    将以下内容复制到本地的 sysbench.config 文件中：
-
-    ```config
-    mysql-host=127.0.0.1
-    mysql-port=4000
-    mysql-user=root
-    mysql-password=
-    mysql-db=test
-    time=120
-    threads=20
-    report-interval=5
-    db-driver=mysql
     ```
 
 3. 使用 [sysbench](https://github.com/akopytov/sysbench) 工具准备数据并进行压测。
